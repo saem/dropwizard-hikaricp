@@ -15,6 +15,10 @@ public class HikariDataSourceFactoryTest {
         factory.dataSourceClassName = "foo";
         factory.setDefaultTransactionIsolation(DataSourceFactory.TransactionIsolation.READ_COMMITTED);
 
-        assertTrue(factory.build(Mockito.mock(MetricRegistry.class), "foo") instanceof DataSourceFactory);
+        try {
+            factory.build(Mockito.mock(MetricRegistry.class), "foo");
+        } catch (RuntimeException e) {
+            assertTrue(e.getMessage().startsWith("java.lang.ClassNotFoundException: foo"));
+        }
     }
 }

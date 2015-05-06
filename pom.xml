@@ -100,15 +100,10 @@
             <id>dropwizard-hikaricp</id>
             <url>http://dropwizard-hikaricp.github.com/${project.version}</url>
         </site>
-        <snapshotRepository>
-            <id>sonatype-nexus-snapshots</id>
-            <name>Sonatype Nexus Snapshots</name>
-            <url>http://oss.sonatype.org/content/repositories/snapshots</url>
-        </snapshotRepository>
         <repository>
-            <id>sonatype-nexus-staging</id>
-            <name>Nexus Release Repository</name>
-            <url>http://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+            <id>bintray</id>
+            <name>Bintray</name>
+            <url>https://api.bintray.com/maven/saem/maven/dropwizard-hikaricp</url>
         </repository>
     </distributionManagement>
 

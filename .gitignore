@@ -6,6 +6,7 @@ target/
 *.iws
 out/
 dependency-reduced-pom.xml
+settings.xml
 
 # Eclipse
 .settings/
